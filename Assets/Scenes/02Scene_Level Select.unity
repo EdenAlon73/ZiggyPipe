@@ -362,6 +362,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_Level (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6583991355432444731, guid: 35fff20db5008e14e88cfb45de5177f6,
+        type: 3}
+      propertyPath: m_EffectDistance.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6583991355432444731, guid: 35fff20db5008e14e88cfb45de5177f6,
+        type: 3}
+      propertyPath: m_EffectDistance.y
+      value: -5
+      objectReference: {fileID: 0}
     - target: {fileID: 7856586139725992219, guid: 35fff20db5008e14e88cfb45de5177f6,
         type: 3}
       propertyPath: buttonEvent.m_PersistentCalls.m_Calls.Array.size
@@ -880,7 +890,7 @@ PrefabInstance:
     - target: {fileID: 4840439832077155766, guid: 19251938ac8343b40b280c23171a5aed,
         type: 3}
       propertyPath: delayInSeconds
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4840439832077155767, guid: 19251938ac8343b40b280c23171a5aed,
         type: 3}
@@ -1314,7 +1324,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2020779393}
   m_HandleRect: {fileID: 2020779392}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1843,6 +1853,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Button_Level
+      objectReference: {fileID: 0}
+    - target: {fileID: 6583991355432444731, guid: 35fff20db5008e14e88cfb45de5177f6,
+        type: 3}
+      propertyPath: m_EffectDistance.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6583991355432444731, guid: 35fff20db5008e14e88cfb45de5177f6,
+        type: 3}
+      propertyPath: m_EffectDistance.y
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 7856586139725992219, guid: 35fff20db5008e14e88cfb45de5177f6,
         type: 3}

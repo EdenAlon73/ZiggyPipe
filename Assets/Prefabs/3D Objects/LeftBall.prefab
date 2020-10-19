@@ -236,7 +236,10 @@ MonoBehaviour:
   desiredPosLeft: {x: 0.112, y: 1.148, z: -1.078999}
   jumpPower: -0.9
   durationOfTween: 0.6
+  rightBallObj: {fileID: 0}
   isLoseLeftBall: 0
+  isWinLeftBall: 0
+  canMove: 1
 --- !u!114 &4459364762064768717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,7 +252,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46f3f839c3a8ec04d89722755bc86469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myGameSession: {fileID: 0}
   xSounds:
   - {fileID: 8300000, guid: 9c915e3aea6ed3e48af5f0c6ab8c817b, type: 3}
   - {fileID: 8300000, guid: 2350d053a99fdfb4f9dd0c13266aaa60, type: 3}

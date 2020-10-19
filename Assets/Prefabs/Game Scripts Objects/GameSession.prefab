@@ -44,12 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScore: 0
-  gameOverCanvas: {fileID: 4783245432088012216, guid: e797f6c5d8f4b444eab23b612cc4e037,
-    type: 3}
-  youWinCanvas: {fileID: 2165997509838527719, guid: 958255655e31a434db1995ca2aafd85e,
-    type: 3}
-  leftBall: {fileID: 3540868682486378928, guid: b922736dc3a83f04b8afa6d111e2ee0a,
-    type: 3}
-  rightBall: {fileID: 1667984433782614184, guid: 2bd253ae663b0634983af2dcea092cc9,
-    type: 3}
-  delayInSeconds: 0.5
+  gameOverCanvas: {fileID: 0}
+  youWinCanvas: {fileID: 0}
+  leftBall: {fileID: 0}
+  rightBall: {fileID: 0}
+  delayInSeconds: 0

@@ -23,6 +23,7 @@ public class RightBall : MonoBehaviour
     public bool isLoseRightBall = false;
     public bool isWinRightBall = false;
     public bool canMove;
+    [SerializeField] private GameObject leftBallObj;
     
     
     //Tween Action
@@ -68,6 +69,7 @@ public class RightBall : MonoBehaviour
         {
             isLoseRightBall = true;
             Destroy(gameObject);
+            Destroy(leftBallObj);
         }
 
         if (other.gameObject.CompareTag("WinTrigger"))

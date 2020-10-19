@@ -15,18 +15,20 @@ public class LeftBall : MonoBehaviour
     [SerializeField] private float durationOfTween;
     private bool snapping = false;
     private int numOfJumps = 0;
+    [SerializeField] private GameObject rightBallObj;
+
     // Tween Condition
     private float xValue;
+    
     //Touch Cache
     private Touch touch;
+    
     // Losing/Winning Condition
     public bool isLoseLeftBall = false;
     public bool isWinLeftBall = false;
     public bool canMove = true;
     
-    
-    
-    
+
     // Tween Action
     private void Update()
     {
@@ -70,6 +72,7 @@ public class LeftBall : MonoBehaviour
         {
             isLoseLeftBall = true;
             Destroy(gameObject);
+            Destroy(rightBallObj);
         }
 
         if (other.gameObject.CompareTag("WinTrigger"))
@@ -77,6 +80,8 @@ public class LeftBall : MonoBehaviour
             isWinLeftBall = true;
         }
     }
+
+    
 }
 
 
