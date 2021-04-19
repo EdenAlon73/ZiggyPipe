@@ -214,14 +214,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1125720db6106d04b8a35edf11a05d92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  desiredPosRight: {x: 2.471, y: 1.148, z: -1.078999}
+  desiredPosRight: {x: 2.411, y: 1.148, z: -1.078999}
   desiredPosLeft: {x: 0.112, y: 1.148, z: -1.078999}
   jumpPower: -0.9
   durationOfTween: 0.6
+  finishedMoving: 0
   isLoseRightBall: 0
   isWinRightBall: 0
   canMove: 0
   leftBallObj: {fileID: 0}
+  leftBallScript: {fileID: 0}
 --- !u!54 &271524521
 Rigidbody:
   m_ObjectHideFlags: 0
