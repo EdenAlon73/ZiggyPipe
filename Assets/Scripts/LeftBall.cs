@@ -16,10 +16,15 @@ public class LeftBall : MonoBehaviour
     private bool snapping = false;
     private int numOfJumps = 0;
     [SerializeField] private GameObject rightBallObj;
+    [SerializeField] private RightBall rightBallScript;
+    public bool finishedMoving = false;
+    private BallHolder ballHolder;
 
+    private bool performTweenRight;
+    private bool performTweenLeft;
     // Tween Condition
     private float xValue;
-    
+    private float yValue;
     //Touch Cache
     private Touch touch;
     
@@ -27,8 +32,14 @@ public class LeftBall : MonoBehaviour
     public bool isLoseLeftBall = false;
     public bool isWinLeftBall = false;
     public bool canMove = true;
-    
 
+    private void Awake()
+    {
+        rightBallScript = FindObjectOfType<RightBall>();
+        ballHolder = GetComponentInParent<BallHolder>();
+        finishedMoving = true;
+    }
+   
     // Tween Action
     private void Update()
     {
@@ -36,36 +47,68 @@ public class LeftBall : MonoBehaviour
         {
             Movement();  
         }
-        
+        MoveCheck();
+       
     }
 
     private void Movement()
     {
         xValue = transform.position.x;
+        /*
         if (Input.touchCount > 0)
         {
             touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Began && xValue >= 2.4f)
+            if (touch.phase == TouchPhase.Began && xValue >= 2.4f && rightBallScript.finishedMoving)
             {
                 transform.DOLocalJump(desiredPosLeft, jumpPower, numOfJumps, durationOfTween, snapping);
             }
-            else if (touch.phase == TouchPhase.Began && xValue <= 0.2f)
+            else if (touch.phase == TouchPhase.Began && xValue <= 0.2f && rightBallScript.finishedMoving)
             {
                 transform.DOLocalJump(desiredPosRight, jumpPower, numOfJumps, durationOfTween, snapping);
             }
         }
-
-        if (Input.GetKeyDown(KeyCode.Space) && xValue >= 2.4f)
+        */
+        if (Input.GetKeyDown(KeyCode.Space) && xValue >= 2.411 && ballHolder.bothFinished)
         {
             transform.DOLocalJump(desiredPosLeft, jumpPower, numOfJumps, durationOfTween, snapping);
         }
 
-        else if (Input.GetKeyDown(KeyCode.Space) && xValue <= 0.2f)
+        else if (Input.GetKeyDown(KeyCode.Space) && xValue <= 0.112 && ballHolder.bothFinished)
+        {
+            transform.DOLocalJump(desiredPosRight, jumpPower, numOfJumps, durationOfTween, snapping);
+        }
+     
+
+    }
+    private void MoveCheck()
+    {
+        yValue = transform.position.y;
+        if (yValue >= 1.148)
+        {
+            finishedMoving = true;
+          
+        }
+        else
+        {
+            finishedMoving = false;
+        }
+    }
+
+    private void PerformTweenRight()
+    {
+        if (performTweenRight)
         {
             transform.DOLocalJump(desiredPosRight, jumpPower, numOfJumps, durationOfTween, snapping);
         }
     }
 
+    private void PerformTweenLeft()
+    {
+        if (performTweenLeft)
+        {
+            transform.DOLocalJump(desiredPosLeft, jumpPower, numOfJumps, durationOfTween, snapping);
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Obstacle"))
