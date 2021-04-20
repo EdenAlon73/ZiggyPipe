@@ -46,10 +46,6 @@ public class RightBall : MonoBehaviour
             Movement();  
         }
         MoveCheck();
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            print("Right is" + finishedMoving + "Left is" + leftBallScript.finishedMoving);
-        }
     }
 
     private void Movement()
