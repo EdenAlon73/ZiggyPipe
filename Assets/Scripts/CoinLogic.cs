@@ -6,7 +6,7 @@ public class CoinLogic : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        print("ball In");
+
         if (other.CompareTag("RightBall"))
         {
             Destroy(this.gameObject);

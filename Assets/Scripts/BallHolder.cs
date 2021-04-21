@@ -23,5 +23,10 @@ public class BallHolder : MonoBehaviour
             bothFinished = false;
         }
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            print("Both Finished" + bothFinished);
+        }
+
     }
 }

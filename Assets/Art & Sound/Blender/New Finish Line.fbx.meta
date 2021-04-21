@@ -3,7 +3,17 @@ guid: a2414f2c3d9b44440a6e2df66aadf7ea
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blackfinishline
+    second: {fileID: 2100000, guid: 81cb98df97152354583dafd9a5e4e255, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Whitefinishline
+    second: {fileID: 2100000, guid: 468b862725bc990459de896cb18920d0, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
