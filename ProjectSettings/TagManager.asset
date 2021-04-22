@@ -8,6 +8,7 @@ TagManager:
   - RightBall
   - Obstacle
   - WinTrigger
+  - MidTrigger
   layers:
   - Default
   - TransparentFX

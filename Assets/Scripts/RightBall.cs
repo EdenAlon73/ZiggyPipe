@@ -31,13 +31,23 @@ public class RightBall : MonoBehaviour
     [SerializeField] private GameObject leftBallObj;
     [SerializeField] private LeftBall leftBallScript;
 
+
+    //new floats
+    [SerializeField] private float minYValue = 0.2491584f;
+    [SerializeField] private float maxYValue = 1.148f;
+    private float ogJumpPower;
+    private float startedJumpTime;
+    private bool inMidTrigger = false;
     private void Awake()
     {
         leftBallScript = FindObjectOfType<LeftBall>();
         ballHolder = GetComponentInParent<BallHolder>();
         finishedMoving = true;
     }
-   
+    private void Start()
+    {
+        ogJumpPower = jumpPower;
+    }
     //Tween Action
     private void Update()
     {
@@ -46,26 +56,51 @@ public class RightBall : MonoBehaviour
             Movement();  
         }
         MoveCheck();
+
+        Vector3 clampedPosition = transform.position;
+        // Now we can manipulte it to clamp the y element
+        clampedPosition.y = Mathf.Clamp(clampedPosition.y, minYValue, maxYValue);
+        // re-assigning the transform's position will clamp it
+        transform.position = clampedPosition;
+
+        if(startedJumpTime == 0.3)
+        {
+            jumpPower = 0f;
+        }
     }
 
     private void Movement()
     {
         xValue = transform.position.x;
-       /*
-        if (Input.touchCount > 0)
+        /*
+         if (Input.touchCount > 0)
+         {
+             touch = Input.GetTouch(0);
+             if (touch.phase == TouchPhase.Began && xValue >= 2.4f && leftBallScript.finishedMoving)
+             {
+                 transform.DOLocalJump(desiredPosLeft, jumpPower, numOfJumps, durationOfTween, snapping);
+             }
+             else if (touch.phase == TouchPhase.Began && xValue <= 0.2f && leftBallScript.finishedMoving)
+             {
+                 transform.DOLocalJump(desiredPosRight, jumpPower, numOfJumps, durationOfTween, snapping);
+             }
+         }
+         */
+        if (Input.GetKeyDown(KeyCode.Space) && !inMidTrigger)
         {
-            touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Began && xValue >= 2.4f && leftBallScript.finishedMoving)
+            startedJumpTime += Time.deltaTime;
+            if (leftBallObj.transform.position.x < transform.position.x)
             {
                 transform.DOLocalJump(desiredPosLeft, jumpPower, numOfJumps, durationOfTween, snapping);
             }
-            else if (touch.phase == TouchPhase.Began && xValue <= 0.2f && leftBallScript.finishedMoving)
+
+            else
             {
                 transform.DOLocalJump(desiredPosRight, jumpPower, numOfJumps, durationOfTween, snapping);
             }
         }
-        */
-
+     
+        /*
         if (Input.GetKeyDown(KeyCode.Space) && xValue >= 2.411 && ballHolder.bothFinished)
         {
             transform.DOLocalJump(desiredPosLeft, jumpPower, numOfJumps, durationOfTween, snapping);
@@ -75,6 +110,7 @@ public class RightBall : MonoBehaviour
         {
             transform.DOLocalJump(desiredPosRight, jumpPower, numOfJumps, durationOfTween, snapping);
         }
+        */
 
     }
     private void MoveCheck()
@@ -83,11 +119,13 @@ public class RightBall : MonoBehaviour
         if(yValue >= 1.148)
         {
             finishedMoving = true;
+            //jumpPower = ogJumpPower;
+            startedJumpTime = 0;
         }
         else
         {
             finishedMoving = false;
-           
+            //jumpPower = 0;
         }
     }
     
@@ -118,9 +156,20 @@ public class RightBall : MonoBehaviour
         if (other.gameObject.CompareTag("WinTrigger"))
         {
             isWinRightBall = true;
+
+        }
+        if (other.gameObject.CompareTag("MidTrigger"))
+        {
+            inMidTrigger = true;
         }
     }
-    
-    
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("MidTrigger"))
+        {
+            inMidTrigger = false;
+        }
+    }
 }
 

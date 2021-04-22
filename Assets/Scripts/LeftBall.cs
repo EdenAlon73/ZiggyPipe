@@ -32,14 +32,22 @@ public class LeftBall : MonoBehaviour
     public bool isLoseLeftBall = false;
     public bool isWinLeftBall = false;
     public bool canMove = true;
-
+    [SerializeField] private float minYValue = 0.25f;
+    [SerializeField] private float maxYValue = 1.148f;
+    private float ogJumpPower;
+    private float startedJumpTime;
+    private bool inMidTrigger = false;
     private void Awake()
     {
         rightBallScript = FindObjectOfType<RightBall>();
         ballHolder = GetComponentInParent<BallHolder>();
         finishedMoving = true;
     }
-   
+    private void Start()
+    {
+        ogJumpPower = jumpPower;
+    }
+
     // Tween Action
     private void Update()
     {
@@ -48,7 +56,17 @@ public class LeftBall : MonoBehaviour
             Movement();  
         }
         MoveCheck();
-       
+
+        Vector3 clampedPosition = transform.position;
+        // Now we can manipulte it to clamp the y element
+        clampedPosition.y = Mathf.Clamp(clampedPosition.y, minYValue, maxYValue);
+        // re-assigning the transform's position will clamp it
+        transform.position = clampedPosition;
+        if (startedJumpTime == 0.3)
+        {
+            jumpPower = 0f;
+        }
+
     }
 
     private void Movement()
@@ -68,6 +86,21 @@ public class LeftBall : MonoBehaviour
             }
         }
         */
+        if (Input.GetKeyDown(KeyCode.Space) && !inMidTrigger)
+        {
+            startedJumpTime += Time.deltaTime;
+            if (rightBallObj.transform.position.x < transform.position.x)
+            {
+                transform.DOLocalJump(desiredPosLeft, jumpPower, numOfJumps, durationOfTween, snapping);
+            }
+
+            else
+            {
+                transform.DOLocalJump(desiredPosRight, jumpPower, numOfJumps, durationOfTween, snapping);
+            }
+        }
+       
+        /*
         if (Input.GetKeyDown(KeyCode.Space) && xValue >= 2.411 && ballHolder.bothFinished)
         {
             transform.DOLocalJump(desiredPosLeft, jumpPower, numOfJumps, durationOfTween, snapping);
@@ -77,7 +110,7 @@ public class LeftBall : MonoBehaviour
         {
             transform.DOLocalJump(desiredPosRight, jumpPower, numOfJumps, durationOfTween, snapping);
         }
-     
+       */
 
     }
     private void MoveCheck()
@@ -86,11 +119,12 @@ public class LeftBall : MonoBehaviour
         if (yValue >= 1.148)
         {
             finishedMoving = true;
-          
+            //jumpPower = ogJumpPower;
         }
         else
         {
             finishedMoving = false;
+           //jumpPower = 0f;
         }
     }
 
@@ -122,9 +156,22 @@ public class LeftBall : MonoBehaviour
         {
             isWinLeftBall = true;
         }
+
+        if (other.gameObject.CompareTag("MidTrigger"))
+        {
+            inMidTrigger = true;
+        }
     }
 
-    
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("MidTrigger"))
+        {
+            inMidTrigger = false;
+            
+        }
+    }
+
 }
 
 
