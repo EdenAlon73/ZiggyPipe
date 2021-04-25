@@ -56,17 +56,7 @@ public class LeftBall : MonoBehaviour
             Movement();  
         }
         MoveCheck();
-
-        Vector3 clampedPosition = transform.position;
-        // Now we can manipulte it to clamp the y element
-        clampedPosition.y = Mathf.Clamp(clampedPosition.y, minYValue, maxYValue);
-        // re-assigning the transform's position will clamp it
-        transform.position = clampedPosition;
-        if (startedJumpTime == 0.3)
-        {
-            jumpPower = 0f;
-        }
-
+       
     }
 
     private void Movement()
