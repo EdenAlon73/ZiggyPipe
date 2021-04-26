@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 64258348031599897}
   - component: {fileID: 2009932341386495181}
   - component: {fileID: 2009932341386495178}
-  - component: {fileID: 1667984433782614184}
   - component: {fileID: 271524521}
+  - component: {fileID: 1667984433782614184}
   m_Layer: 0
   m_Name: RightBall
   m_TagString: RightBall
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 2009932341386495180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.471, y: 1.148, z: -1.079}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 8.928572, y: 8.928572, z: 8.928572}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d8809b410176f1242a7e2ccb9c0b300c, type: 2}
+  - {fileID: 2100000, guid: 7e19ad8def84c6a4db180d25df7573f8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -153,8 +153,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0, b: 0.81258917, a: 1}
-      key1: {r: 0.5283019, g: 0.01744394, b: 0.43481144, a: 1}
+      key0: {r: 1, g: 1, b: 0.07058824, a: 1}
+      key1: {r: 0.8431373, g: 0.7372549, b: 0.20392159, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -197,33 +197,11 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2009932341386495180}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.20616436
-  m_Center: {x: -0.0058352947, y: 0.0000009536743, z: 0.00000017881393}
---- !u!114 &1667984433782614184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2009932341386495180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1125720db6106d04b8a35edf11a05d92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  desiredPosRight: {x: 2.411, y: 1.148, z: -1.078999}
-  desiredPosLeft: {x: 0.112, y: 1.148, z: -1.078999}
-  jumpPower: -0.9
-  durationOfTween: 0.6
-  finishedMoving: 0
-  isLoseRightBall: 0
-  isWinRightBall: 0
-  canMove: 0
-  leftBallObj: {fileID: 0}
-  leftBallScript: {fileID: 0}
+  m_Radius: 0.13
+  m_Center: {x: 0.000000115484, y: 0.0000010728838, z: 0.00000022724275}
 --- !u!54 &271524521
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -240,3 +218,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1667984433782614184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009932341386495180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1125720db6106d04b8a35edf11a05d92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftBallObj: {fileID: 0}
+  finishedMoving: 0
+  isLoseRightBall: 0
+  isWinRightBall: 0
+  canMove: 0

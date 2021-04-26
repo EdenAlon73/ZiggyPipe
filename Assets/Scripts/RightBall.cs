@@ -8,54 +8,38 @@ using DG.Tweening.Plugins.Options;
 
 public class RightBall : MonoBehaviour
 {
-    [Header("Tween Config")]
-    [SerializeField] private Vector3 desiredPosRight;
-    [SerializeField] private Vector3 desiredPosLeft;
-    [SerializeField] private float jumpPower;
-    [SerializeField] private float durationOfTween;
-    private bool snapping = false;
-    private bool performTweenRight;
-    private bool performTweenLeft;
-    private int numOfJumps = 0;
-    public bool finishedMoving = false;
+    //Cache Referance:
+    private Touch touch;
+    private LeftBall leftBallScript;
     private BallHolder ballHolder;
-    // Tween Condition
+    [SerializeField] private GameObject leftBallObj;
+    
+    //Tween Movement Conditions
+    public bool finishedMoving = false;
+    private bool inMidTrigger = false;
     private float xValue;
     private float yValue;
-    //Touch Cache
-    private Touch touch;
-    // Losing/Winning Condition
+    
+    //Win\Lose Conditions
     public bool isLoseRightBall = false;
     public bool isWinRightBall = false;
-    public bool canMove;
-    [SerializeField] private GameObject leftBallObj;
-    [SerializeField] private LeftBall leftBallScript;
-
-
-    //new floats
-    [SerializeField] private float minYValue = 0.2491584f;
-    [SerializeField] private float maxYValue = 1.148f;
-    private float ogJumpPower;
-    private float startedJumpTime;
-    private bool inMidTrigger = false;
+    public bool canMove = true;
+    
     private void Awake()
     {
         leftBallScript = FindObjectOfType<LeftBall>();
         ballHolder = GetComponentInParent<BallHolder>();
         finishedMoving = true;
+        inMidTrigger = false;
     }
-    private void Start()
-    {
-        ogJumpPower = jumpPower;
-    }
-    //Tween Action
+   
     private void Update()
     {
         if (canMove)
         {
             Movement();  
         }
-        MoveCheck();
+        //  MoveCheck();
     }
 
     private void Movement()
@@ -77,15 +61,16 @@ public class RightBall : MonoBehaviour
          */
         if (Input.GetKeyDown(KeyCode.Space) && !inMidTrigger)
         {
-            startedJumpTime += Time.deltaTime;
             if (leftBallObj.transform.position.x < transform.position.x)
             {
-                transform.DOLocalJump(desiredPosLeft, jumpPower, numOfJumps, durationOfTween, snapping);
+                transform.DOLocalJump(ballHolder.desiredPosLeft, -ballHolder.jumpPower, ballHolder.numOfJumps,
+                    ballHolder.durationOfTween, ballHolder.snapping);
             }
 
             else
             {
-                transform.DOLocalJump(desiredPosRight, jumpPower, numOfJumps, durationOfTween, snapping);
+                transform.DOLocalJump(ballHolder.desiredPosRight, -ballHolder.jumpPower, ballHolder.numOfJumps,
+                    ballHolder.durationOfTween, ballHolder.snapping);
             }
         }
      
@@ -102,37 +87,22 @@ public class RightBall : MonoBehaviour
         */
 
     }
+    /*
     private void MoveCheck()
     {
         yValue = transform.position.y;
-        if(yValue >= 1.148)
+        if(yValue >= 1.192)
         {
             finishedMoving = true;
-            //jumpPower = ogJumpPower;
-            startedJumpTime = 0;
         }
         else
         {
             finishedMoving = false;
-            //jumpPower = 0;
         }
     }
+    */
     
-    private void PerformTweenRight()
-    {
-        if(performTweenRight)
-        {
-            transform.DOLocalJump(desiredPosRight, jumpPower, numOfJumps, durationOfTween, snapping);
-        }
-    }
-
-    private void PerformTweenLeft()
-    {
-        if (performTweenLeft)
-        {
-            transform.DOLocalJump(desiredPosLeft, jumpPower, numOfJumps, durationOfTween, snapping);
-        }
-    }
+   
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Obstacle"))
@@ -149,7 +119,7 @@ public class RightBall : MonoBehaviour
         }
         if (other.gameObject.CompareTag("MidTrigger"))
         {
-            inMidTrigger = true;
+            //inMidTrigger = true;
         }
     }
 
@@ -157,7 +127,7 @@ public class RightBall : MonoBehaviour
     {
         if (other.gameObject.CompareTag("MidTrigger"))
         {
-            inMidTrigger = false;
+            //inMidTrigger = false;
         }
     }
 }

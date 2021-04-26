@@ -1,12 +1,19 @@
 fileFormatVersion: 2
-guid: 84e586b3ccb101740864d57aa5af9b94
+guid: fc95364bb0237384988dee5eafc9b5a2
 ModelImporter:
   serializedVersion: 19301
-  internalIDToNameTable:
+  internalIDToNameTable: []
+  externalObjects:
   - first:
-      74: -623603649343465320
-    second: Scene
-  externalObjects: {}
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HalfPipe
+    second: {fileID: 2100000, guid: d18e6c3a591bf7c42b9905ad339c7e0f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: ce23720613a883e48ab298ca5877f8a6, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

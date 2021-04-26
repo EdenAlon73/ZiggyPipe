@@ -2,13 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6ded698-2310-4617-b592-8f0630cc2890" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ZiggyPipe/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZiggyPipe/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ZiggyPipe/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZiggyPipe/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ZiggyPipe/.idea/contentModel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ZiggyPipe/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZiggyPipe/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ZiggyPipe/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ZiggyPipe/.idea/riderModule.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ZiggyPipe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZiggyPipe/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/03Scene_Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/03Scene_Level 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/04Scene_Level 2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/04Scene_Level 2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user.keystore" beforeDir="false" afterPath="$PROJECT_DIR$/user.keystore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ZiggyPipe/riderModule.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art &amp; Sound/Blender/Seal.blend.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art &amp; Sound/Blender/Seal.blend.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/3D Objects/LeftBall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/3D Objects/LeftBall.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/3D Objects/RightBall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/3D Objects/RightBall.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Camera &amp; Lights &amp; Post-Process/Camera &amp; Lights &amp; Post-Process.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Camera &amp; Lights &amp; Post-Process/Camera &amp; Lights &amp; Post-Process.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BallHolder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BallHolder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeftBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LeftBall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RightBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RightBall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,12 +25,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/Scripts/LeftBall.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/RightBall.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BallHolder.cs" />
+    </changedPaths>
+  </component>
   <component name="ProjectId" id="1j66vBu4L10CKL2QLYMl1wpOj6F" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -34,6 +49,7 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -43,6 +59,7 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -65,6 +82,7 @@
       <workItem from="1608458842414" duration="481000" />
       <workItem from="1610897556057" duration="754000" />
       <workItem from="1610982699536" duration="736000" />
+      <workItem from="1619433232573" duration="3395000" />
     </task>
     <servers />
   </component>

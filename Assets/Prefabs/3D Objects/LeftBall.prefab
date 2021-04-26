@@ -33,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 4459364762064768705}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.112, y: 1.148, z: -1.0789986}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 8.928572, y: 8.928572, z: 8.928572}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 18cbc82856c985c4baed2da906f7a276, type: 2}
+  - {fileID: 2100000, guid: 8a8c9dfb42c802b4fa0f49a52aa7b4c7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -155,8 +155,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.30588236, g: 0.12941177, b: 0.8352942, a: 1}
-      key1: {r: 0.14509805, g: 0.03529412, b: 0.6039216, a: 1}
+      key0: {r: 1, g: 0.14117648, b: 0.7921569, a: 1}
+      key1: {r: 0.79215693, g: 0.10980393, b: 0.61960787, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -202,8 +202,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.2075648
-  m_Center: {x: 0.029850632, y: 0.0000009536743, z: 0.00000017881393}
+  m_Radius: 0.13
+  m_Center: {x: 0, y: 0.0000009613037, z: -0.026602317}
 --- !u!54 &4459364762064768716
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -232,12 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b520630a7d4ced48b594fd6fb9c1cdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  desiredPosRight: {x: 2.411, y: 1.148, z: -1.078999}
-  desiredPosLeft: {x: 0.112, y: 1.148, z: -1.078999}
-  jumpPower: -0.9
-  durationOfTween: 0.6
   rightBallObj: {fileID: 0}
-  rightBallScript: {fileID: 0}
   finishedMoving: 0
   isLoseLeftBall: 0
   isWinLeftBall: 0
