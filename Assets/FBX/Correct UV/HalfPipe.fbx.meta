@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8a8b91e502b13b14da9065934c3e34c9
+guid: 72376746911cc5248be4bba641fcdbcd
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -8,12 +8,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: HalfPipe
-    second: {fileID: 2100000, guid: a8eb1619d88a75f409fce7062aeeec51, type: 2}
+    second: {fileID: 2100000, guid: 0fe4e3eb5f11a8145bc01e84a6fa6dd4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material
-    second: {fileID: 2100000, guid: 5c5e648d3c856d34cb6d7129916ae9c1, type: 2}
+    second: {fileID: 2100000, guid: a53731dda055bb2439aa95946ca8ac49, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
