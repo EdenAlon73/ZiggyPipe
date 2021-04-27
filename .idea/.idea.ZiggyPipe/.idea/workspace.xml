@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6ded698-2310-4617-b592-8f0630cc2890" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ZiggyPipe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZiggyPipe/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FBX/Correct UV/HalfPipe.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FBX/Correct UV/HalfPipe.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/3D Objects/BallHolder.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/3D Objects/BallHolder.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/06Scene_Level 6.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/06Scene_Level 6.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BallHolder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BallHolder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeftBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LeftBall.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/RightBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RightBall.cs" afterDir="false" />
     </list>
@@ -18,8 +23,9 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/BallHolder.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CountdownTimer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/WaypointSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BallHolder.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RightBall.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LeftBall.cs" />
     </changedPaths>
@@ -75,7 +81,7 @@
       <workItem from="1610897556057" duration="754000" />
       <workItem from="1610982699536" duration="736000" />
       <workItem from="1619433232573" duration="5158000" />
-      <workItem from="1619510377169" duration="379000" />
+      <workItem from="1619510377169" duration="3077000" />
     </task>
     <servers />
   </component>

@@ -65,9 +65,9 @@ public class LeftBall : MonoBehaviour
             }
         }
         */
-        if (Input.GetKeyDown(KeyCode.Space) && !inMidTrigger)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (rightBallObj.transform.position.x < transform.position.x)
+            if (rightBallObj.transform.localPosition.x < transform.localPosition.x)
             {
                 //Move Left
                 transform.DOLocalJump(ballHolder.desiredPosLeft, -ballHolder.jumpPower, ballHolder.numOfJumps,

@@ -59,18 +59,20 @@ public class RightBall : MonoBehaviour
              }
          }
          */
-        if (Input.GetKeyDown(KeyCode.Space) && !inMidTrigger)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (leftBallObj.transform.position.x < transform.position.x)
+            if (leftBallObj.transform.localPosition.x < transform.localPosition.x)
             {
                 transform.DOLocalJump(ballHolder.desiredPosLeft, -ballHolder.jumpPower, ballHolder.numOfJumps,
                     ballHolder.durationOfTween, ballHolder.snapping);
+                print("leftball perform left");
             }
 
             else
             {
                 transform.DOLocalJump(ballHolder.desiredPosRight, -ballHolder.jumpPower, ballHolder.numOfJumps,
                     ballHolder.durationOfTween, ballHolder.snapping);
+                print("leftball perform right");
             }
         }
      

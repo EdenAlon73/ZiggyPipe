@@ -41,6 +41,5 @@ public class BallHolder : MonoBehaviour
     {
         ballsYValue = leftBallScript.transform.localPosition.y;
         jumpPower = ballsYValue - 1.95f;
-        print(jumpPower);
     }
 }
