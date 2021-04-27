@@ -7,19 +7,14 @@ using UnityEngine.UI;
 
 public class CountdownTimer : MonoBehaviour
 {
-    private float currentTime;
-    private float startingTime = 2f;
     
     [SerializeField] private TextMeshProUGUI countdownText;
     [SerializeField] private GameObject scoreText;
-   // [SerializeField] private GameObject ballHolder;
- //   [SerializeField] private GameObject cameraTracker;
     private LeftBall leftBallScrip;
     private RightBall rightBallScript;
+    private float currentTime;
+    private float startingTime = 2f;
     
-    
-    
-
     private void Start()
     {
         currentTime = startingTime;
@@ -29,13 +24,16 @@ public class CountdownTimer : MonoBehaviour
 
     private void Update()
     {
+      // CantMoveCountdown();
+    }
+
+    private void CantMoveCountdown()
+    {
         currentTime -= 1 * Time.deltaTime;
         countdownText.text = currentTime.ToString("0");
         if (currentTime <= 0)
         {
             currentTime = 0f;
-          //  ballHolder.GetComponent<ConstantMovingForward>().enabled = true;
-          //  cameraTracker.GetComponent<ConstantMovingForward>().enabled = true;
             leftBallScrip.canMove = true;
             rightBallScript.canMove = true;
             scoreText.SetActive(true);
@@ -43,8 +41,6 @@ public class CountdownTimer : MonoBehaviour
         }
         else
         {
-           // ballHolder.GetComponent<ConstantMovingForward>().enabled = false;
-           // cameraTracker.GetComponent<ConstantMovingForward>().enabled = false;
             leftBallScrip.canMove = false;
             rightBallScript.canMove = false;
             scoreText.SetActive(false);
