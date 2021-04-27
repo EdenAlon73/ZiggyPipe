@@ -52,17 +52,17 @@ public class LeftBall : MonoBehaviour
     {
         xValue = transform.position.x;
         
-        if (Input.touchCount > 0 && touch.phase == TouchPhase.Began)
+        if (Input.touchCount > 0 )
         {
             touch = Input.GetTouch(0);
-            if (rightBallObj.transform.localPosition.x < transform.localPosition.x)
+            if (rightBallObj.transform.localPosition.x < transform.localPosition.x && touch.phase == TouchPhase.Began)
             {
                 //Move Left
                 transform.DOLocalJump(ballHolder.desiredPosLeft, -ballHolder.jumpPower, ballHolder.numOfJumps,
                     ballHolder.durationOfTween, ballHolder.snapping);
             }
             
-            else
+            if (rightBallObj.transform.localPosition.x > transform.localPosition.x && touch.phase == TouchPhase.Began)
             {
                 //Move Right
                 transform.DOLocalJump(ballHolder.desiredPosRight, -ballHolder.jumpPower, ballHolder.numOfJumps,
