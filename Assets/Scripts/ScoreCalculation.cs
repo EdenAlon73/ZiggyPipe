@@ -37,6 +37,7 @@ public class ScoreCalculation : MonoBehaviour
     {
         if (other.gameObject.CompareTag("RightBall"))
         {
+           // Handheld.Vibrate(); maybe???
             FindObjectOfType<GameSession>().AddToScore(pointsPerZigzag);
             AudioClip clip = xSounds[UnityEngine.Random.Range(0, xSounds.Length)];
             myAudioSource.PlayOneShot(clip);

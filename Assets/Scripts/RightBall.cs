@@ -102,6 +102,7 @@ public class RightBall : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Obstacle"))
         {
+            Handheld.Vibrate();
             isLoseRightBall = true;
             Destroy(gameObject);
             Destroy(leftBallObj);
