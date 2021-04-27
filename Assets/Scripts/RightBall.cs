@@ -45,20 +45,25 @@ public class RightBall : MonoBehaviour
     private void Movement()
     {
         xValue = transform.position.x;
-        /*
-         if (Input.touchCount > 0)
-         {
-             touch = Input.GetTouch(0);
-             if (touch.phase == TouchPhase.Began && xValue >= 2.4f && leftBallScript.finishedMoving)
-             {
-                 transform.DOLocalJump(desiredPosLeft, jumpPower, numOfJumps, durationOfTween, snapping);
-             }
-             else if (touch.phase == TouchPhase.Began && xValue <= 0.2f && leftBallScript.finishedMoving)
-             {
-                 transform.DOLocalJump(desiredPosRight, jumpPower, numOfJumps, durationOfTween, snapping);
-             }
-         }
-         */
+        
+        if (Input.touchCount > 0 && touch.phase == TouchPhase.Began)
+        {
+            touch = Input.GetTouch(0);
+            if (leftBallObj.transform.localPosition.x < transform.localPosition.x)
+            {
+                //Move Left
+                transform.DOLocalJump(ballHolder.desiredPosLeft, -ballHolder.jumpPower, ballHolder.numOfJumps,
+                    ballHolder.durationOfTween, ballHolder.snapping);
+            }
+            
+            else
+            {
+                //Move Right
+                transform.DOLocalJump(ballHolder.desiredPosRight, -ballHolder.jumpPower, ballHolder.numOfJumps,
+                    ballHolder.durationOfTween, ballHolder.snapping);
+            }
+        }
+        
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (leftBallObj.transform.localPosition.x < transform.localPosition.x)
@@ -75,19 +80,7 @@ public class RightBall : MonoBehaviour
                 print("leftball perform right");
             }
         }
-     
-        /*
-        if (Input.GetKeyDown(KeyCode.Space) && xValue >= 2.411 && ballHolder.bothFinished)
-        {
-            transform.DOLocalJump(desiredPosLeft, jumpPower, numOfJumps, durationOfTween, snapping);
-        }
-
-        else if (Input.GetKeyDown(KeyCode.Space) && xValue <= 0.112 && ballHolder.bothFinished)
-        {
-            transform.DOLocalJump(desiredPosRight, jumpPower, numOfJumps, durationOfTween, snapping);
-        }
-        */
-
+        
     }
     /*
     private void MoveCheck()
