@@ -117,18 +117,7 @@ public class RightBall : MonoBehaviour
             isWinRightBall = true;
 
         }
-        if (other.gameObject.CompareTag("MidTrigger"))
-        {
-            //inMidTrigger = true;
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("MidTrigger"))
-        {
-            //inMidTrigger = false;
-        }
+        
     }
 }
 

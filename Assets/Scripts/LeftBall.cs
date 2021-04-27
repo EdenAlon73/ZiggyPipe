@@ -124,22 +124,10 @@ public class LeftBall : MonoBehaviour
         {
             isWinLeftBall = true;
         }
-
-        if (other.gameObject.CompareTag("MidTrigger"))
-        {
-            // inMidTrigger = true;
-           // ballHolder.jumpPower = 0;
-        }
+        
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("MidTrigger"))
-        {
-           // inMidTrigger = false;
-          // ballHolder.jumpPower = ballHolder.ogJumpPower;
-        }
-    }
+   
 
 }
 
