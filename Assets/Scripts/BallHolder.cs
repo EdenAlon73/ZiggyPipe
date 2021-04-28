@@ -19,7 +19,7 @@ public class BallHolder : MonoBehaviour
     private float ballsYValue;
 
     public GameObject confettiFX;
-    
+    public GameObject confettiFX2;
     private void Awake()
     {
         leftBallScript = GetComponentInChildren<LeftBall>();

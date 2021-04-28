@@ -119,6 +119,7 @@ public class LeftBall : MonoBehaviour
             
             //isWinLeftBall = true; open win canvas and next level
             ballHolder.confettiFX.SetActive(true);
+            ballHolder.confettiFX2.SetActive(true);
         }
         
     }
