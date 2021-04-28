@@ -17,6 +17,8 @@ public class BallHolder : MonoBehaviour
     public bool snapping = false;
     public int numOfJumps = 0;
     private float ballsYValue;
+
+    [SerializeField] private GameObject confettiFX;
     
     private void Awake()
     {
