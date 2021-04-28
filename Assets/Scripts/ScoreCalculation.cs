@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class ScoreCalculation : MonoBehaviour
 {
-    
+    /*
     [Header("SFX")]
     [SerializeField] private AudioClip[] xSounds;
     private AudioSource myAudioSource;
@@ -21,18 +21,24 @@ public class ScoreCalculation : MonoBehaviour
     private Sequence _sequence;
     
     [SerializeField] private int pointsPerZigzag = 1;
+    
+    */
     private GameSession myGameSession;
-    
+    //new
+    GameManager gameManager;
+    [SerializeField] private Transform scoreSpwanPoint;
+    [SerializeField] private GameObject scoreTxt;
+    [SerializeField] private Canvas canvas;
+    private Animator anim;
 
-    
-    
     private void Awake()
     {
         myGameSession = FindObjectOfType<GameSession>();
-        myAudioSource = GetComponent<AudioSource>();
-
+        //myAudioSource = GetComponent<AudioSource>();
+        gameManager = FindObjectOfType<GameManager>();
+        anim = GetComponent<Animator>();
     }
-    
+
     /*
     private void OnTriggerEnter(Collider other)
     {
@@ -56,11 +62,18 @@ public class ScoreCalculation : MonoBehaviour
 
         }
     }
-*/    
+   
     private void EaseOut()
     {
         _sequence.Append(_rectTransform.DOLocalMoveY(endPosYTwo, 1f, false).SetEase(Ease.Linear));
     }
-    
-    
+    */
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("RightBall"))
+        {
+            gameManager.AddToScore();
+            Instantiate(scoreTxt, scoreSpwanPoint.position, Quaternion.identity, canvas.transform);
+        }
+    }
 }
