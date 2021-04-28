@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
@@ -30,8 +31,9 @@ public class ScoreCalculation : MonoBehaviour
     [SerializeField] private GameObject scoreTxt;
     [SerializeField] private Canvas canvas;
     private Animator anim;
-
-    private void Awake()
+    
+    
+    private void Start()
     {
         myGameSession = FindObjectOfType<GameSession>();
         //myAudioSource = GetComponent<AudioSource>();

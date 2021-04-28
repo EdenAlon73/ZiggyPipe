@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6ded698-2310-4617-b592-8f0630cc2890" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Confetti FX 2/Upgrade/Confetti FX 2 HDRP Upgrade (2019.3.1f1).unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Confetti FX 2/Upgrade/Confetti FX 2 URP Upgrade (2019.3.1f1).unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FBX/Correct UV/Material 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FBX/Correct UV/Material 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Score/Text_ScoreAdded.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Score/Text_ScoreAdded.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/05Scene_Level 3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/05Scene_Level 3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BallHolder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BallHolder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeftBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LeftBall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RightBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RightBall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreCalculation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreCalculation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,10 +29,10 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/CountdownTimer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WaypointSystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/RightBall.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScoreCalculation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BallHolder.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LeftBall.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/RightBall.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" />
     </changedPaths>
   </component>

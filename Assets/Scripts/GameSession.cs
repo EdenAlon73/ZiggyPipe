@@ -20,13 +20,17 @@ public class GameSession : MonoBehaviour
 
     private void Awake()
     {
-        TTPCore.Setup();
+        //TTPCore.Setup();
+        
+    }
+
+    private void Start()
+    {
         currentScore = 0;
         gameOverCanvas.SetActive(false);
         youWinCanvas.SetActive(false);
         rightBall = FindObjectOfType<RightBall>();
         leftBall = FindObjectOfType<LeftBall>();
-
     }
 
     private void Update()

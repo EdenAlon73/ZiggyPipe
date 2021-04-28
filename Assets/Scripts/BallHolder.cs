@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,12 +21,15 @@ public class BallHolder : MonoBehaviour
 
     public GameObject confettiFX;
     public GameObject confettiFX2;
-    private void Awake()
+    
+
+    private void Start()
     {
         leftBallScript = GetComponentInChildren<LeftBall>();
         rightBallScript = GetComponentInChildren<RightBall>();
         ogJumpPower = jumpPower;
     }
+
     private void Update()
     {
         if(rightBallScript.finishedMoving && leftBallScript.finishedMoving)

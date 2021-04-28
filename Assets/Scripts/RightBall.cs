@@ -25,14 +25,15 @@ public class RightBall : MonoBehaviour
     public bool isWinRightBall = false;
     public bool canMove = true;
     
-    private void Awake()
+
+    private void Start()
     {
         leftBallScript = FindObjectOfType<LeftBall>();
         ballHolder = GetComponentInParent<BallHolder>();
         finishedMoving = true;
         inMidTrigger = false;
     }
-   
+
     private void Update()
     {
         if (canMove)
