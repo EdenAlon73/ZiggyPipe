@@ -1187,8 +1187,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 59142218451338316, guid: 42983c5510ff4224784af3a1bca74a74,
         type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 217.33484
+      objectReference: {fileID: 0}
+    - target: {fileID: 59142218451338316, guid: 42983c5510ff4224784af3a1bca74a74,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 180.21016
+      objectReference: {fileID: 0}
+    - target: {fileID: 59142218451338316, guid: 42983c5510ff4224784af3a1bca74a74,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000020504
+      objectReference: {fileID: 0}
+    - target: {fileID: 59142218451338316, guid: 42983c5510ff4224784af3a1bca74a74,
+        type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -25.900024
+      value: -45.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 59142218451338319, guid: 42983c5510ff4224784af3a1bca74a74,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 59142218451338319, guid: 42983c5510ff4224784af3a1bca74a74,
         type: 3}
@@ -1198,8 +1218,13 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 59142218451338319, guid: 42983c5510ff4224784af3a1bca74a74,
         type: 3}
+      propertyPath: m_fontSizeBase
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 59142218451338319, guid: 42983c5510ff4224784af3a1bca74a74,
+        type: 3}
       propertyPath: m_textAlignment
-      value: 258
+      value: 514
       objectReference: {fileID: 0}
     - target: {fileID: 59142218451338319, guid: 42983c5510ff4224784af3a1bca74a74,
         type: 3}
@@ -1240,6 +1265,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.characterCount
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 59142218451338319, guid: 42983c5510ff4224784af3a1bca74a74,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42983c5510ff4224784af3a1bca74a74, type: 3}
