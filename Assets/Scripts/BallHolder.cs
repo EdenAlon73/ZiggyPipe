@@ -18,7 +18,7 @@ public class BallHolder : MonoBehaviour
     public int numOfJumps = 0;
     private float ballsYValue;
 
-    [SerializeField] private GameObject confettiFX;
+    public GameObject confettiFX;
     
     private void Awake()
     {
@@ -41,7 +41,11 @@ public class BallHolder : MonoBehaviour
 
     private void UpdateJumpPower()
     {
-        ballsYValue = leftBallScript.transform.localPosition.y;
-        jumpPower = ballsYValue - 1.95f;
+        if (leftBallScript != null)
+        {
+            ballsYValue = leftBallScript.transform.localPosition.y;
+            jumpPower = ballsYValue - 1.95f;
+        }
+       
     }
 }

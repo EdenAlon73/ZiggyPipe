@@ -116,7 +116,9 @@ public class LeftBall : MonoBehaviour
 
         if (other.gameObject.CompareTag("WinTrigger"))
         {
-            isWinLeftBall = true;
+            
+            //isWinLeftBall = true; open win canvas and next level
+            ballHolder.confettiFX.SetActive(true);
         }
         
     }

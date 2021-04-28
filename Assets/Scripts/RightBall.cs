@@ -110,7 +110,7 @@ public class RightBall : MonoBehaviour
 
         if (other.gameObject.CompareTag("WinTrigger"))
         {
-            isWinRightBall = true;
+           // isWinRightBall = true; open win canvas and next level
 
         }
         

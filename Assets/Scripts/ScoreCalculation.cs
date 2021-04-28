@@ -33,6 +33,7 @@ public class ScoreCalculation : MonoBehaviour
 
     }
     
+    /*
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("RightBall"))
@@ -55,7 +56,7 @@ public class ScoreCalculation : MonoBehaviour
 
         }
     }
-    
+*/    
     private void EaseOut()
     {
         _sequence.Append(_rectTransform.DOLocalMoveY(endPosYTwo, 1f, false).SetEase(Ease.Linear));
