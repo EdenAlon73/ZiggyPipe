@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Tabtale.TTPlugins;
 
 public class GameSession : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class GameSession : MonoBehaviour
 
     private void Awake()
     {
-        
+        TTPCore.Setup();
         currentScore = 0;
         gameOverCanvas.SetActive(false);
         youWinCanvas.SetActive(false);
