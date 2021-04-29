@@ -9,13 +9,12 @@ using UnityEngine.UI;
 public class GameSession : MonoBehaviour
 {
     [Header("Game Session Config")]
-    [SerializeField] public int currentScore = 0;
     [SerializeField] private GameObject gameOverCanvas;
     [SerializeField] private GameObject youWinCanvas;
+    [SerializeField] private float delayInSeconds = .5f;
     public LeftBall leftBall;
     public RightBall rightBall;
-
-    [SerializeField] private float delayInSeconds = .5f;
+    private GameManager gameManager;
     
 
     private void Awake()
@@ -26,11 +25,11 @@ public class GameSession : MonoBehaviour
 
     private void Start()
     {
-        currentScore = 0;
         gameOverCanvas.SetActive(false);
         youWinCanvas.SetActive(false);
         rightBall = FindObjectOfType<RightBall>();
         leftBall = FindObjectOfType<LeftBall>();
+        gameManager = GetComponent<GameManager>();
     }
 
     private void Update()
@@ -55,16 +54,10 @@ public class GameSession : MonoBehaviour
         }
     }
     
-
-    public void AddToScore(int pointsPerZigzag)
-    {
-        currentScore += pointsPerZigzag;
-       
-    }
-
+    
     public int GetScore()
     {
-        return currentScore;
+        return gameManager.currentScore;
     }
 
     public void ResetGame()
@@ -107,13 +100,7 @@ public class GameSession : MonoBehaviour
   {
       youWinCanvas.SetActive(true);
       yield return new WaitForSeconds(delayInSeconds);
-    
   }
-   
-   
-
-
-
 }
 
 

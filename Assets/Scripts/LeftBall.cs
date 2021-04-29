@@ -42,8 +42,7 @@ public class LeftBall : MonoBehaviour
         {
             Movement();  
         }
-        //   MoveCheck();
-       
+        
     }
 
     private void Movement()
@@ -86,21 +85,6 @@ public class LeftBall : MonoBehaviour
         }
     }
     
-   /*
-    private void MoveCheck()
-    {
-        yValue = transform.position.y;
-        if (yValue >= 1.148)
-        {
-            finishedMoving = true;
-        }
-        else
-        {
-            finishedMoving = false;
-           
-        }
-    }
-    */
    
     private void OnTriggerEnter(Collider other)
     {
@@ -114,14 +98,17 @@ public class LeftBall : MonoBehaviour
 
         if (other.gameObject.CompareTag("WinTrigger"))
         {
-            
-            //isWinLeftBall = true; open win canvas and next level
             ballHolder.confettiFX.SetActive(true);
             ballHolder.confettiFX2.SetActive(true);
+            Invoke("OpenWinCanvas", 2f);
         }
         
     }
 
+    private void OpenWinCanvas()
+    {
+        isWinLeftBall = true;
+    }
    
 
 }

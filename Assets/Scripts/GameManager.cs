@@ -7,32 +7,33 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private int pointsPerCoinCollected = 1;
-    [SerializeField] private int pointsPerMovable = 20;
-    [SerializeField] private int currentScore = 0;
-    [SerializeField] private TextMeshProUGUI scoreText;
+    public int currentScore = 0;
+    [SerializeField] private int pointsPerCross = 1;
+    [SerializeField] private TextMeshProUGUI[] scoreTexts;
+    [SerializeField] private TextMeshProUGUI ingameScoreText;
     private void Awake()
     {
         currentScore = 0;
-        scoreText = FindObjectOfType<TextMeshProUGUI>();
+      
     }
     private void Start()
     {
-        scoreText.text = currentScore.ToString();
+        foreach (var textBox in scoreTexts)
+        {
+            textBox.text = currentScore.ToString();
+        }
     }
     public void AddToScore()
     {
-        currentScore = currentScore + pointsPerCoinCollected;
-        scoreText.text = currentScore.ToString();
+        currentScore = currentScore + pointsPerCross;
+        
+        foreach (var textBox in scoreTexts)
+        {
+            textBox.text = currentScore.ToString();
+        }
         StartCoroutine(ScorePulse());
     }
-
-    public void AddToScoreMovable()
-    {
-        currentScore = currentScore + pointsPerMovable;
-        scoreText.text = currentScore.ToString();
-        StartCoroutine(ScorePulse());
-    }
+    
 
     public void ResetGame()
     {
@@ -43,17 +44,17 @@ public class GameManager : MonoBehaviour
     {
         for (float i = 1f; i <= 1.4f; i += 0.05f)
         {
-            scoreText.rectTransform.localScale = new Vector3(i, i, i);
+            ingameScoreText.rectTransform.localScale = new Vector3(i, i, i);
             yield return new WaitForEndOfFrame();
         }
-        scoreText.rectTransform.localScale = new Vector3(1.4f, 1.4f, 1.4f);
+        ingameScoreText.rectTransform.localScale = new Vector3(1.4f, 1.4f, 1.4f);
 
         for (float i = 1.4f; i >= 1f; i -= 0.05f)
         {
-            scoreText.rectTransform.localScale = new Vector3(i, i, i);
+            ingameScoreText.rectTransform.localScale = new Vector3(i, i, i);
             yield return new WaitForEndOfFrame();
         }
-        scoreText.rectTransform.localScale = new Vector3(1, 1, 1);
+        ingameScoreText.rectTransform.localScale = new Vector3(1, 1, 1);
 
     }
 }
