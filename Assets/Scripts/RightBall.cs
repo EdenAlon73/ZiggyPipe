@@ -83,20 +83,7 @@ public class RightBall : MonoBehaviour
         }
         
     }
-    /*
-    private void MoveCheck()
-    {
-        yValue = transform.position.y;
-        if(yValue >= 1.192)
-        {
-            finishedMoving = true;
-        }
-        else
-        {
-            finishedMoving = false;
-        }
-    }
-    */
+ 
     
    
     private void OnTriggerEnter(Collider other)
@@ -108,12 +95,7 @@ public class RightBall : MonoBehaviour
             Destroy(gameObject);
             Destroy(leftBallObj);
         }
-
-        if (other.gameObject.CompareTag("WinTrigger"))
-        {
-           // isWinRightBall = true; open win canvas and next level
-
-        }
+        
         
     }
 }

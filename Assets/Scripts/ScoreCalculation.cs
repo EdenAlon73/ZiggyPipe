@@ -31,6 +31,7 @@ public class ScoreCalculation : MonoBehaviour
     [SerializeField] private GameObject scoreTxt;
     [SerializeField] private Canvas canvas;
     private Animator anim;
+    [SerializeField] private ParticleSystem ballsTouchingFX;
     
     
     private void Start()
@@ -75,7 +76,8 @@ public class ScoreCalculation : MonoBehaviour
         if (other.gameObject.CompareTag("RightBall"))
         {
             gameManager.AddToScore();
-            Instantiate(scoreTxt, scoreSpwanPoint.position, Quaternion.identity, canvas.transform);
+            // Instantiate(scoreTxt, scoreSpwanPoint.position, Quaternion.identity, canvas.transform);   For little points jumping near balls
+            ballsTouchingFX.Play();
         }
     }
 }
