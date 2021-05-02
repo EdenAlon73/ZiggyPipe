@@ -8,13 +8,14 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public int currentScore = 0;
-    [SerializeField] private int pointsPerCross = 1;
+    [SerializeField] private int pointsPerCross = 10;
     [SerializeField] private TextMeshProUGUI[] scoreTexts;
     [SerializeField] private TextMeshProUGUI ingameScoreText;
     private void Awake()
     {
         currentScore = 0;
-      
+        pointsPerCross = 10;
+
     }
     private void Start()
     {

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1841,11 +1841,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1785299003, guid: cf71718ad13a4ee4484b3059bf624451, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000000083402565
+      value: -0.000000008340255
       objectReference: {fileID: 0}
     - target: {fileID: 1785299003, guid: cf71718ad13a4ee4484b3059bf624451, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000021106934
+      value: 0.0000000021106932
       objectReference: {fileID: 0}
     - target: {fileID: 6262080850740463698, guid: cf71718ad13a4ee4484b3059bf624451,
         type: 3}
@@ -1915,12 +1915,12 @@ PrefabInstance:
     - target: {fileID: 6262080852173695820, guid: cf71718ad13a4ee4484b3059bf624451,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000000083402565
+      value: -0.000000008340255
       objectReference: {fileID: 0}
     - target: {fileID: 6262080852173695820, guid: cf71718ad13a4ee4484b3059bf624451,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000021106934
+      value: 0.0000000021106932
       objectReference: {fileID: 0}
     - target: {fileID: 6262080852173695821, guid: cf71718ad13a4ee4484b3059bf624451,
         type: 3}
@@ -2771,17 +2771,8 @@ MonoBehaviour:
       points:
       - {x: 0, y: 0, z: 0}
       - {x: 0, y: 0, z: 0}
-      - {x: 0.06983393, y: 0.000008764019, z: 87.05824}
-      - {x: -0.00027767106, y: 0.0000087641965, z: 88.18656}
-      - {x: -0.29144102, y: 0.000008764932, z: 92.872314}
-      - {x: -2.7660112, y: 0, z: 95.51592}
-      - {x: -6.516759, y: 0, z: 95.74646}
-      - {x: -6.9173117, y: 0, z: 95.77108}
-      - {x: -8.567041, y: 0.0017428398, z: 95.79085}
-      - {x: -9.3509445, y: 0, z: 95.79132}
-      - {x: -13.222166, y: -0.008606827, z: 95.793655}
-      - {x: -132.70644, y: 0.02784799, z: 95.809105}
-      - {x: -135.79163, y: 0, z: 95.799515}
+      - {x: 0, y: 0, z: 191.38336}
+      - {x: 0, y: 0, z: 192.51169}
       isClosed: 0
       space: 0
       controlMode: 0
@@ -2793,12 +2784,9 @@ MonoBehaviour:
       perAnchorNormalsAngle:
       - 0
       - 0
-      - 0
-      - 0
-      - 0
       globalNormalsAngle: 90
       flipNormals: 0
-    vertexPathUpToDate: 1
+    vertexPathUpToDate: 0
     vertexPathMaxAngleError: 0.3
     vertexPathMinVertexSpacing: 0.01
     showTransformTool: 1
