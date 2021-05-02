@@ -100,7 +100,8 @@ public class LeftBall : MonoBehaviour
         {
             ballHolder.confettiFX.SetActive(true);
             ballHolder.confettiFX2.SetActive(true);
-            Invoke("OpenWinCanvas", 1.5f);
+            Invoke("OpenWinCanvas", 1f);
+            canMove = false;
         }
         
     }

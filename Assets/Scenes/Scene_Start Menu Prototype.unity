@@ -658,6 +658,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1487121351}
     m_Modifications:
+    - target: {fileID: 1005174442, guid: 903c25001059b454095db20ed62eb98c, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1005174443, guid: 903c25001059b454095db20ed62eb98c, type: 3}
       propertyPath: m_Material
       value: 
@@ -665,6 +669,66 @@ PrefabInstance:
     - target: {fileID: 1005174443, guid: 903c25001059b454095db20ed62eb98c, type: 3}
       propertyPath: m_sharedMaterial
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828126726, guid: 903c25001059b454095db20ed62eb98c, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828126726, guid: 903c25001059b454095db20ed62eb98c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828126726, guid: 903c25001059b454095db20ed62eb98c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828126726, guid: 903c25001059b454095db20ed62eb98c, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828126726, guid: 903c25001059b454095db20ed62eb98c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828126726, guid: 903c25001059b454095db20ed62eb98c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828126726, guid: 903c25001059b454095db20ed62eb98c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 536.86597
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828126726, guid: 903c25001059b454095db20ed62eb98c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 525
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828126727, guid: 903c25001059b454095db20ed62eb98c, type: 3}
+      propertyPath: m_text
+      value: "Half Pipe \nRunner"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828126727, guid: 903c25001059b454095db20ed62eb98c, type: 3}
+      propertyPath: m_fontSize
+      value: 214.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828126727, guid: 903c25001059b454095db20ed62eb98c, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 214.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828126727, guid: 903c25001059b454095db20ed62eb98c, type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828126727, guid: 903c25001059b454095db20ed62eb98c, type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828126727, guid: 903c25001059b454095db20ed62eb98c, type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828126727, guid: 903c25001059b454095db20ed62eb98c, type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3428250227597660960, guid: 903c25001059b454095db20ed62eb98c,
         type: 3}

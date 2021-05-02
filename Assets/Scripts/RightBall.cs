@@ -95,6 +95,10 @@ public class RightBall : MonoBehaviour
             Destroy(gameObject);
             Destroy(leftBallObj);
         }
+        if (other.gameObject.CompareTag("WinTrigger"))
+        {
+            canMove = false;
+        }
         
         
     }
