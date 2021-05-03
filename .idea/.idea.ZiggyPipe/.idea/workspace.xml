@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f6ded698-2310-4617-b592-8f0630cc2890" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Star_A.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Star_A.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/05Scene_Level 7.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/05Scene_Level 7.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeftBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LeftBall.cs" afterDir="false" />
-    </list>
+    <list default="true" id="f6ded698-2310-4617-b592-8f0630cc2890" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,10 +18,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/CountdownTimer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WaypointSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/RightBall.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BallHolder.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScoreCalculation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/RightBall.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LeftBall.cs" />
     </changedPaths>
   </component>
@@ -86,7 +82,7 @@
       <workItem from="1619611011838" duration="2985000" />
       <workItem from="1619677069718" duration="2543000" />
       <workItem from="1619692934988" duration="3238000" />
-      <workItem from="1619939812093" duration="681000" />
+      <workItem from="1619939812093" duration="1390000" />
     </task>
     <servers />
   </component>
